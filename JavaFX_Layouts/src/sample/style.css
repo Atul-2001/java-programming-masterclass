@@ -1,0 +1,13 @@
+.button {
+-fx-background-color: green;
+-fx-text-fill: white;
+}
+
+#footerButton {
+-fx-background-color: Yellow;
+-fx-text-fill: Red;
+}
+
+.centerLabel {
+-fx-text-fill: Brown;
+}

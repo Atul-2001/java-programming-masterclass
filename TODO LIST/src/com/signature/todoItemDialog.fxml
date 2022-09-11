@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.signature.DialogController">
+    <headerText>
+        Add Something here..
+    </headerText>
+
+    <content>
+        <GridPane hgap="10" vgap="10">
+            <Label text="Task : " GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="taskName" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Description : " GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextArea fx:id="taskDetail" GridPane.rowIndex="1" GridPane.columnIndex="1" wrapText="true"/>
+
+            <Label text="Date : " GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <HBox GridPane.rowIndex="2" GridPane.columnIndex="1" fx:id="hBox" spacing="20" alignment="CENTER_LEFT">
+                <DatePicker fx:id="taskDate"/>
+            </HBox>
+        </GridPane>
+    </content>
+
+</DialogPane>

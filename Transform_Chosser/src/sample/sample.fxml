@@ -1,0 +1,19 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.web.WebView?>
+<GridPane fx:id="gridPane" fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+    <Label fx:id="label" GridPane.rowIndex="0" GridPane.columnIndex="0" text="Hello World" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" rotate="180"/>
+    <Button fx:id="file" text="Open File" GridPane.rowIndex="1" GridPane.columnIndex="0" onAction="#handleFile"/>
+    <Button fx:id="folder" text="Open Folder" GridPane.rowIndex="1" GridPane.columnIndex="1" onAction="#handleFile"/>
+    <Button fx:id="save" text="Save" GridPane.rowIndex="1" GridPane.columnIndex="2" onAction="#handleFile"/>
+
+    <Hyperlink text="JavaFX" GridPane.rowIndex="2" GridPane.columnIndex="0" onAction="#handleLink"/>
+    <WebView fx:id="webPage" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="5" GridPane.rowSpan="5"/>
+
+</GridPane>

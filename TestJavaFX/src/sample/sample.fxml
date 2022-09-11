@@ -1,0 +1,11 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+    <JFXButton text="Hello" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <JFXTextField labelFloat="true" promptText="Name" GridPane.columnIndex="1"/>
+</GridPane>

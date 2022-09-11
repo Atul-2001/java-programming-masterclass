@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+<?import java.lang.String?>
+
+<?import javafx.scene.text.Font?>
+<GridPane alignment="center"
+          hgap="10"
+          vgap="10"
+          xmlns="http://javafx.com/javafx/10.0.2-internal"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="sample.Controller"
+          stylesheets="@style.css">
+
+    <Label text="This is very long text long long long long long"
+           textFill="green"
+           wrapText="true"
+           GridPane.columnIndex="0"
+           GridPane.rowIndex="0">
+        <font>
+            <Font name="Arial Bold" size="20"/>
+        </font>
+    </Label>
+    <Button fx:id="btn"
+            GridPane.rowIndex="0"
+            GridPane.columnIndex="1"
+            text="Click Me"
+            onAction="#clickAction"
+    />
+
+    <HBox spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <RadioButton text="Red">
+         <toggleGroup>
+            <ToggleGroup fx:id="colorGroup" />
+         </toggleGroup></RadioButton>
+        <RadioButton selected="true" text="Green" toggleGroup="$colorGroup" />
+        <RadioButton text="Blue" toggleGroup="$colorGroup" />
+    </HBox>
+
+    <VBox spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="2">
+
+        <CheckBox text="Signature Inc." wrapText="true" />
+        <CheckBox selected="true" text="Signature Industries" wrapText="true" />
+        <CheckBox text="Signature Foundation" wrapText="true" />
+    </VBox>
+
+    <HBox spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="3">
+
+        <ToggleButton text="Turn on Light" wrapText="true" />
+        <ToggleButton text="Turn on Fan" wrapText="true" />
+        <ToggleButton text="Turn on A.C." wrapText="true" />
+    </HBox>
+
+    <TextField promptText="Text Field"
+               GridPane.columnIndex="0"
+               GridPane.rowIndex="4" />
+
+    <PasswordField promptText="Password"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="4" />
+
+    <ComboBox GridPane.rowIndex="5"
+              GridPane.columnIndex="0"
+              GridPane.columnSpan="2" >
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Option 1"/>
+                <String fx:value="Option 2"/>
+                <String fx:value="Option 3"/>
+                <String fx:value="Option 4"/>
+                <String fx:value="Option 5"/>
+            </FXCollections>
+        </items>
+        <value>
+            <String fx:value="--Select Options"/>
+        </value>
+    </ComboBox>
+
+    <ChoiceBox GridPane.rowIndex="5"
+               GridPane.columnIndex="1">
+
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="cb 1"/>
+                <String fx:value="cb 2"/>
+                <String fx:value="cb 3"/>
+                <String fx:value="cb 4"/>
+                <String fx:value="cb 5"/>
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+
+<!--    <ListView GridPane.rowIndex="5"-->
+<!--              GridPane.columnIndex="2">-->
+<!--        <items>-->
+<!--            <FXCollections fx:factory="observableArrayList">-->
+<!--                <String fx:value="Item 1"/>-->
+<!--                <String fx:value="Item 2"/>-->
+<!--                <String fx:value="Item 3"/>-->
+<!--                <String fx:value="Item 4"/>-->
+<!--                <String fx:value="Item 5"/>-->
+<!--            </FXCollections>-->
+<!--        </items>-->
+<!--    </ListView>-->
+
+    <Slider GridPane.rowIndex="6"
+            GridPane.columnIndex="0"
+            min="0"
+            max="100"
+            showTickLabels="true"
+            showTickMarks="true"
+            minorTickCount="4"
+            snapToTicks="true"/>
+
+    <Spinner GridPane.rowIndex="7"
+             GridPane.columnIndex="0"
+             min="0"
+             max="100"
+             editable="true"
+             initialValue="15"   />
+
+    <Accordion GridPane.rowIndex="8"
+               GridPane.columnIndex="1"
+               expandedPane="$pane2" >
+
+        <panes>
+            <TitledPane text="Label 1">
+                <Label text="This is Titled Pane 1 Lable"/>
+            </TitledPane>
+
+            <TitledPane fx:id="pane2" text="Label 2">
+                <Label text="This is Titled Pane 2 Label" />
+            </TitledPane>
+
+            <TitledPane text="Label 3">
+                <Label text="This is Titled Pane 1 Label"/>
+            </TitledPane>
+        </panes>
+    </Accordion>
+
+    <ColorPicker GridPane.rowIndex="9"
+                 GridPane.columnIndex="0"/>
+
+    <DatePicker GridPane.rowIndex="10"
+                GridPane.columnIndex="1"/>
+</GridPane>

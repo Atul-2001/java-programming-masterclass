@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts>
+<contact>
+	<profile> </profile>
+	<first_name>Atul</first_name>
+	<last_name>Singh</last_name>
+	<company> </company>
+	<phone_number>88699755446</phone_number>
+	<phone_type>Mobile</phone_type>
+	<email> </email>
+	<email_type> </email_type>
+	<address> </address>
+	<website> </website>
+	<date> </date>
+	<date_type> </date_type>
+	<relationship> </relationship>
+	<relation_type> </relation_type>
+	<sip> </sip>
+	<notes>my contact</notes>
+</contact>
+<contact>
+	<profile> </profile>
+	<first_name>Rishu</first_name>
+	<last_name>Singh</last_name>
+	<company> </company>
+	<phone_number>7054935280</phone_number>
+	<phone_type>Mobile</phone_type>
+	<email> </email>
+	<email_type> </email_type>
+	<address> </address>
+	<website> </website>
+	<date> </date>
+	<date_type> </date_type>
+	<relationship> </relationship>
+	<relation_type> </relation_type>
+	<sip> </sip>
+	<notes> </notes>
+</contact>
+</contacts>

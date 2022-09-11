@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="mainWindow" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="com.signature.Controller">
+
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="File">
+                    <items>
+                        <MenuItem onAction="#showNewItemDialog" text="New TODO" />
+                        <SeparatorMenuItem />
+                        <MenuItem onAction="#handleExit" text="Exit" />
+                    </items>
+                </Menu>
+
+                <Menu text="Edit">
+                    <items>
+                        <MenuItem onAction="#handleEditItem" text="Edit TODO" />
+                        <SeparatorMenuItem />
+                        <MenuItem onAction="#handleDeleteItem" text="Delete TODO" />
+                        <SeparatorMenuItem/>
+                        <MenuItem onAction="#handleFilter" text="Filter->Today's"/>
+                    </items>
+                </Menu>
+
+                <Menu text="Help">
+                    <items>
+                        <MenuItem text="About" />
+                    </items>
+                </Menu>
+            </MenuBar>
+            <HBox>
+                <Button onAction="#showNewItemDialog">
+                    <tooltip>
+                        <Tooltip text="Add New Todo Item" />
+                    </tooltip>
+                    <graphic>
+                        <ImageView>
+                            <Image url="@../../resources/icons/general/New24.gif"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <Button onAction="#handleEditItem">
+                    <tooltip>
+                        <Tooltip text="Edit Todo Item" />
+                    </tooltip>
+                    <graphic>
+                        <ImageView>
+                            <Image url="@../../resources/icons/general/Edit24.gif"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <Button onAction="#handleDeleteItem">
+                    <tooltip>
+                        <Tooltip text="Delete Todo Item" />
+                    </tooltip>
+                    <graphic>
+                        <ImageView>
+                            <Image url="@../../resources/icons/general/Delete24.gif"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <ToggleButton fx:id="filterButton" text="filter" onAction="#handleFilter">
+                    <tooltip>
+                        <Tooltip text="Filter Item -> Up to see Today's Item And Down to see All Items." />
+                    </tooltip>
+                    <graphic>
+                        <ImageView>
+<!--                            <Image url="https://www.pngkey.com/png/full/937-9379368_filter-font-awesome-filter-icon-png.png"/>-->
+                        </ImageView>
+                    </graphic>
+                </ToggleButton>
+
+                <Button >
+                    <tooltip>
+                        <Tooltip text="About" />
+                    </tooltip>
+                    <graphic>
+                        <ImageView>
+                            <Image url="@../../resources/icons/general/About24.gif"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </HBox>
+        </VBox>
+    </top>
+
+    <left>
+<!--        <ListView fx:id="todoListView" onMouseClicked="#handleClickListView"/>-->
+        <ListView fx:id="todoListView" onKeyPressed="#handleKeyPressed" />
+    </left>
+
+    <center>
+        <VBox style="-fx-background-color: white">
+            <TextArea fx:id="todoDetailView" wrapText="true" VBox.vgrow="ALWAYS" />
+            <HBox>
+                <Label style="-fx-background-color: white" text="Due : ">
+                    <font>
+                        <Font name="Times New Roman Bold" size="20" />
+                    </font>
+                </Label>
+                <Label fx:id="deadLineLabel" style="-fx-background-color: white">
+                    <font>
+                        <Font name="Times New Roman Bold" size="20" />
+                    </font>
+                </Label>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

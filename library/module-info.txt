@@ -1,0 +1,6 @@
+jdeps --generate-module-info /home/anonymous/ ~/.m2/repository/org/xerial/sqlite-jdbc/3.32.3.2/sqlite-jdbc-3.32.3.2.jar
+javac --module-path ~/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar --patch-module java.mail=javax.mail-1.6.2-sources.jar module-info.java
+or
+javac --patch-module java.mail=javax.mail-1.6.2-sources.jar module-info.java
+
+copy module-info.class to the jar file

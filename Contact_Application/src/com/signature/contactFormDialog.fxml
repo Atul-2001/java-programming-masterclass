@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+
+<DialogPane fx:id="formDialog" prefHeight="520.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.signature.ContactFormController">
+    <header>
+        <Pane prefHeight="140">
+            <Circle fx:id="icon" centerX="150.0" centerY="70.0" onMouseClicked="#handleAddProfile" onMouseEntered="#handleEntered" onMouseExited="#handleExit" radius="60.0">
+                <fill>
+                    <ImagePattern>
+                        <image>
+                            <Image url="@../../resources/contactIcon.png" />
+                        </image>
+                    </ImagePattern>
+                </fill>
+            </Circle>
+            <SVGPath fx:id="addIcon" content="M3 4V1h2v3h3v2H5v3H3V6H0V4h3zm3 6V7h3V4h7l1.83 2H21c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V10h3zm7 9c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-3.2-5c0 1.77 1.43 3.2 3.2 3.2s3.2-1.43 3.2-3.2-1.43-3.2-3.2-3.2-3.2 1.43-3.2 3.2z" layoutX="140.0" layoutY="60.0" onMouseClicked="#handleAddProfile" onMouseEntered="#handleEntered" onMouseExited="#handleExit" opacity="0.0" style="-fx-background-color: rgba(0,0,0,.7);" />
+         <Hyperlink fx:id="removeProfile" layoutX="226.0" layoutY="92.0" onAction="#handleRemoveProfile" opacity="0.0" text="Remove profile" />
+        </Pane>
+    </header>
+
+    <content>
+        <ScrollPane>
+            <VBox fx:id="form" spacing="10">
+                <GridPane alignment="TOP_CENTER" hgap="10" vgap="10">
+                    <padding>
+                        <Insets left="10" right="10" />
+                    </padding>
+                    <SVGPath content="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    <TextField fx:id="firstNameField" prefHeight="30" prefWidth="230" promptText="First Name" GridPane.columnIndex="1" />
+
+                    <TextField fx:id="lastNameField" prefHeight="30" prefWidth="230" promptText="Last Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <SVGPath content="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <TextField fx:id="companyField" prefHeight="30" prefWidth="230" promptText="Post and Company" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                    <SVGPath content="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                    <TextField fx:id="phoneField" prefHeight="30" prefWidth="230" promptText="Phone" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                    <ComboBox fx:id="phoneTypeCB" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="No Label" />
+                                <String fx:value="Mobile" />
+                                <String fx:value="Work" />
+                                <String fx:value="Home" />
+                                <String fx:value="Main" />
+                                <String fx:value="Work Fax" />
+                                <String fx:value="Home Fax" />
+                                <String fx:value="Pager" />
+                                <String fx:value="Other" />
+                            </FXCollections>
+                        </items>
+                        <value>
+                            <String fx:value="Mobile" />
+                        </value>
+                    </ComboBox>
+
+                    <SVGPath content="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                    <TextField fx:id="emailField" prefHeight="30" prefWidth="230" promptText="Email" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                    <ComboBox fx:id="emailTypeCB" style="-fx-border-style: solid;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="No Label" />
+                                <String fx:value="Home" />
+                                <String fx:value="Work" />
+                                <String fx:value="Other" />
+                            </FXCollections>
+                        </items>
+                        <value>
+                            <String fx:value="Home" />
+                        </value>
+                    </ComboBox>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+                </GridPane>
+
+                <TitledPane fx:id="moreInfoPane" expanded="false" text="More fields">
+                    <GridPane hgap="10" vgap="10">
+                        <SVGPath content="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                        <TextField fx:id="addressField" prefHeight="30" prefWidth="230" promptText="Address" GridPane.columnIndex="1" />
+
+                        <SVGPath content="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <TextField fx:id="websiteField" prefHeight="30" prefWidth="230" promptText="Website" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <SVGPath content="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <DatePicker fx:id="dateField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="dateTypeCB" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="No label" />
+                                    <String fx:value="Birthday" />
+                                    <String fx:value="Anniversary" />
+                                    <String fx:value="Other" />
+                                </FXCollections>
+                            </items>
+                            <value>
+                                <String fx:value="Birthday" />
+                            </value>
+                        </ComboBox>
+
+                        <SVGPath content="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM8 17.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5zM9.5 8c0-1.38 1.12-2.5 2.5-2.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5S9.5 9.38 9.5 8zm6.5 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                        <TextField fx:id="relationshipField" prefHeight="30" prefWidth="230" promptText="Relationship" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                        <ComboBox fx:id="relationTypeCB" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="No Label" />
+                                    <String fx:value="Assistant" />
+                                    <String fx:value="Brother" />
+                                    <String fx:value="Child" />
+                                    <String fx:value="Domestic Partner" />
+                                    <String fx:value="Father" />
+                                    <String fx:value="Friend" />
+                                    <String fx:value="Manager" />
+                                    <String fx:value="Mother" />
+                                </FXCollections>
+                            </items>
+                            <value>
+                                <String fx:value="Assistant" />
+                            </value>
+                        </ComboBox>
+
+                        <SVGPath content="M17 3h-1v5h1V3zm-2 2h-2V4h2V3h-3v3h2v1h-2v1h3V5zm3-2v5h1V6h2V3h-3zm2 2h-1V4h1v1zm0 10.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.01.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.27-.26.35-.65.24-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                        <TextField fx:id="sipField" prefHeight="30" prefWidth="230" promptText="SIP" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                        <SVGPath content="M14 17H4v2h10v-2zm6-8H4v2h16V9zM4 15h16v-2H4v2zM4 5v2h16V5H4z" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                        <TextField fx:id="notesField" prefHeight="30" prefWidth="230" promptText="Notes" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+                    </GridPane>
+                </TitledPane>
+            </VBox>
+        </ScrollPane>
+    </content>
+</DialogPane>
