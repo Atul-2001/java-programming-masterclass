@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts>
+<contact>
+	<profile> </profile>
+	<first_name>Atul</first_name>
+	<last_name>Suryavanshi</last_name>
+	<company>Signature Inc.</company>
+	<phone_number>8869975446</phone_number>
+	<phone_type>Mobile</phone_type>
+	<email>atul.atendra15@gmail.com</email>
+	<email_type>Home</email_type>
+	<address>Abanpur Saroha, Ayodhya, Uttar Pradesh, India</address>
+	<website>www.signature.com</website>
+	<date>15/09/2001</date>
+	<date_type>Birthday</date_type>
+	<relationship> </relationship>
+	<relation_type>Assistant</relation_type>
+	<sip> </sip>
+	<notes>My Contact</notes>
+	<isFavourite>true</isFavourite>
+</contact>
+<contact>
+	<profile> </profile>
+	<first_name>Rishu</first_name>
+	<last_name>Suryavanshi</last_name>
+	<company> </company>
+	<phone_number>7054935280</phone_number>
+	<phone_type>Mobile</phone_type>
+	<email>suryvanshirishu27@gmail.com</email>
+	<email_type>Home</email_type>
+	<address> </address>
+	<website> </website>
+	<date> </date>
+	<date_type>Birthday</date_type>
+	<relationship> </relationship>
+	<relation_type>Assistant</relation_type>
+	<sip> </sip>
+	<notes> </notes>
+	<isFavourite>true</isFavourite>
+</contact>
+<contact>
+	<profile> </profile>
+	<first_name>Papa</first_name>
+	<last_name> </last_name>
+	<company> </company>
+	<phone_number>8009626948</phone_number>
+	<phone_type>Mobile</phone_type>
+	<email> </email>
+	<email_type>Home</email_type>
+	<address> </address>
+	<website> </website>
+	<date> </date>
+	<date_type>Birthday</date_type>
+	<relationship> </relationship>
+	<relation_type>Assistant</relation_type>
+	<sip> </sip>
+	<notes> </notes>
+	<isFavourite>true</isFavourite>
+</contact>
+<contact>
+	<profile> </profile>
+	<first_name>Home</first_name>
+	<last_name> </last_name>
+	<company> </company>
+	<phone_number>9935577383</phone_number>
+	<phone_type>Mobile</phone_type>
+	<email> </email>
+	<email_type>Home</email_type>
+	<address> </address>
+	<website> </website>
+	<date> </date>
+	<date_type>Birthday</date_type>
+	<relationship> </relationship>
+	<relation_type>Assistant</relation_type>
+	<sip> </sip>
+	<notes> </notes>
+	<isFavourite>true</isFavourite>
+</contact>
+</contacts>

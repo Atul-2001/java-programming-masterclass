@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:bookstore xmlns:ns2="org.signature.model">
+    <bookList>
+        <book>
+            <author>James Gosling</author>
+            <title>Book 1</title>
+            <publisher>Pristine</publisher>
+            <isbn>489-429954720</isbn>
+        </book>
+        <book>
+            <author>James Gosling</author>
+            <title>Book 2</title>
+            <publisher>flipkart</publisher>
+            <isbn>30-1092808499</isbn>
+        </book>
+        <book>
+            <author>Muncie Premchand</author>
+            <title>Book 3</title>
+            <publisher>Amazon</publisher>
+            <isbn>959-372114015</isbn>
+        </book>
+        <book>
+            <author>Dennis Ritchie</author>
+            <title>Book 4</title>
+            <publisher>Pristine</publisher>
+            <isbn>62-1166053374</isbn>
+        </book>
+        <book>
+            <author>Joshua Bloch</author>
+            <title>Book 5</title>
+            <publisher>Pristine</publisher>
+            <isbn>982-1720289033</isbn>
+        </book>
+        <book>
+            <author>Dennis Ritchie</author>
+            <title>Book 6</title>
+            <publisher>Amazon</publisher>
+            <isbn>131-1736032911</isbn>
+        </book>
+        <book>
+            <author>Joshua Bloch</author>
+            <title>Book 7</title>
+            <publisher>Amazon</publisher>
+            <isbn>668-1193763777</isbn>
+        </book>
+        <book>
+            <author>James Gosling</author>
+            <title>Book 8</title>
+            <publisher>Pristine</publisher>
+            <isbn>155-615217962</isbn>
+        </book>
+        <book>
+            <author>James Gosling</author>
+            <title>Book 9</title>
+            <publisher>Pristine</publisher>
+            <isbn>610-490459899</isbn>
+        </book>
+        <book>
+            <author>Joshua Bloch</author>
+            <title>Book 10</title>
+            <publisher>Pristine</publisher>
+            <isbn>905-1036897412</isbn>
+        </book>
+    </bookList>
+    <location>Bharat</location>
+    <name>Bharat Book Store</name>
+</ns2:bookstore>
